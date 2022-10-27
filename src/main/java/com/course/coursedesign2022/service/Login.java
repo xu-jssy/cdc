@@ -28,8 +28,8 @@ public class Login {
        long end = LocalDateTime.now().withHour(23).withMinute(59).withSecond(59).toEpochSecond(ZoneOffset.ofHours(8));
        long now = LocalDateTime.now().toEpochSecond(ZoneOffset.ofHours(8));
        long lastlogintime = loginuser.getLogintime();
-       //上次登陆时间在今天，非首次登陆
-       if(lastlogintime>=start && lastlogintime<=end){
+       //上次登陆时间不在今天，首次登陆
+       if(lastlogintime<start || lastlogintime>end){
            int grow=pointObject.getGrowScore();
            pointObject.setGrowScore(grow+1);
            userMapper.updatePointObject(pointObject);
