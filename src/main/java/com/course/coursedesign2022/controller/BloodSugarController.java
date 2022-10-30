@@ -17,14 +17,14 @@ public class BloodSugarController {
 
     @Autowired
     private BloodSugar BloodSugar;
-    @PutMapping(value="/BloodSugar/{id}")//修改密码
+
+    @PutMapping(value="/BloodSugar/{id}")//修改血糖记录
     public BSugar updateUser(@PathVariable("id") Integer id,
                              @RequestParam("BSRecord") Integer BSRecord){
         BSugar BSugar = BSugarMapper.selectByPrimaryKey(id);
         BSugar.setBsrecord(BSRecord);
         System.out.println(BSugar.getBsrecord());
         BSugar.setCount(BSugar.getCount()+1);
-
         BloodSugar.BSRecord(BSugar);//血糖加分策略
         BSugarMapper.updateByPrimaryKey(BSugar);
         return BSugarMapper.selectByPrimaryKey(id);

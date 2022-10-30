@@ -3,14 +3,14 @@ package com.course.coursedesign2022.pojo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class loginUserExample {
+public class LoginUserExample {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public loginUserExample() {
+    public LoginUserExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 
@@ -104,63 +104,63 @@ public class loginUserExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        public Criteria andZhanghaoIsNull() {
-            addCriterion("zhanghao is null");
+        public Criteria andIdIsNull() {
+            addCriterion("id is null");
             return (Criteria) this;
         }
 
-        public Criteria andZhanghaoIsNotNull() {
-            addCriterion("zhanghao is not null");
+        public Criteria andIdIsNotNull() {
+            addCriterion("id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andZhanghaoEqualTo(Integer value) {
-            addCriterion("zhanghao =", value, "zhanghao");
+        public Criteria andIdEqualTo(Integer value) {
+            addCriterion("id =", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andZhanghaoNotEqualTo(Integer value) {
-            addCriterion("zhanghao <>", value, "zhanghao");
+        public Criteria andIdNotEqualTo(Integer value) {
+            addCriterion("id <>", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andZhanghaoGreaterThan(Integer value) {
-            addCriterion("zhanghao >", value, "zhanghao");
+        public Criteria andIdGreaterThan(Integer value) {
+            addCriterion("id >", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andZhanghaoGreaterThanOrEqualTo(Integer value) {
-            addCriterion("zhanghao >=", value, "zhanghao");
+        public Criteria andIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("id >=", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andZhanghaoLessThan(Integer value) {
-            addCriterion("zhanghao <", value, "zhanghao");
+        public Criteria andIdLessThan(Integer value) {
+            addCriterion("id <", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andZhanghaoLessThanOrEqualTo(Integer value) {
-            addCriterion("zhanghao <=", value, "zhanghao");
+        public Criteria andIdLessThanOrEqualTo(Integer value) {
+            addCriterion("id <=", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andZhanghaoIn(List<Integer> values) {
-            addCriterion("zhanghao in", values, "zhanghao");
+        public Criteria andIdIn(List<Integer> values) {
+            addCriterion("id in", values, "id");
             return (Criteria) this;
         }
 
-        public Criteria andZhanghaoNotIn(List<Integer> values) {
-            addCriterion("zhanghao not in", values, "zhanghao");
+        public Criteria andIdNotIn(List<Integer> values) {
+            addCriterion("id not in", values, "id");
             return (Criteria) this;
         }
 
-        public Criteria andZhanghaoBetween(Integer value1, Integer value2) {
-            addCriterion("zhanghao between", value1, value2, "zhanghao");
+        public Criteria andIdBetween(Integer value1, Integer value2) {
+            addCriterion("id between", value1, value2, "id");
             return (Criteria) this;
         }
 
-        public Criteria andZhanghaoNotBetween(Integer value1, Integer value2) {
-            addCriterion("zhanghao not between", value1, value2, "zhanghao");
+        public Criteria andIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("id not between", value1, value2, "id");
             return (Criteria) this;
         }
 
@@ -221,66 +221,6 @@ public class loginUserExample {
 
         public Criteria andMimaNotBetween(Integer value1, Integer value2) {
             addCriterion("mima not between", value1, value2, "mima");
-            return (Criteria) this;
-        }
-
-        public Criteria andIdIsNull() {
-            addCriterion("id is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andIdIsNotNull() {
-            addCriterion("id is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andIdEqualTo(Integer value) {
-            addCriterion("id =", value, "id");
-            return (Criteria) this;
-        }
-
-        public Criteria andIdNotEqualTo(Integer value) {
-            addCriterion("id <>", value, "id");
-            return (Criteria) this;
-        }
-
-        public Criteria andIdGreaterThan(Integer value) {
-            addCriterion("id >", value, "id");
-            return (Criteria) this;
-        }
-
-        public Criteria andIdGreaterThanOrEqualTo(Integer value) {
-            addCriterion("id >=", value, "id");
-            return (Criteria) this;
-        }
-
-        public Criteria andIdLessThan(Integer value) {
-            addCriterion("id <", value, "id");
-            return (Criteria) this;
-        }
-
-        public Criteria andIdLessThanOrEqualTo(Integer value) {
-            addCriterion("id <=", value, "id");
-            return (Criteria) this;
-        }
-
-        public Criteria andIdIn(List<Integer> values) {
-            addCriterion("id in", values, "id");
-            return (Criteria) this;
-        }
-
-        public Criteria andIdNotIn(List<Integer> values) {
-            addCriterion("id not in", values, "id");
-            return (Criteria) this;
-        }
-
-        public Criteria andIdBetween(Integer value1, Integer value2) {
-            addCriterion("id between", value1, value2, "id");
-            return (Criteria) this;
-        }
-
-        public Criteria andIdNotBetween(Integer value1, Integer value2) {
-            addCriterion("id not between", value1, value2, "id");
             return (Criteria) this;
         }
 
@@ -345,62 +285,62 @@ public class loginUserExample {
         }
 
         public Criteria andLogintimeIsNull() {
-            addCriterion("logintime is null");
+            addCriterion("loginTime is null");
             return (Criteria) this;
         }
 
         public Criteria andLogintimeIsNotNull() {
-            addCriterion("logintime is not null");
+            addCriterion("loginTime is not null");
             return (Criteria) this;
         }
 
         public Criteria andLogintimeEqualTo(Integer value) {
-            addCriterion("logintime =", value, "logintime");
+            addCriterion("loginTime =", value, "logintime");
             return (Criteria) this;
         }
 
         public Criteria andLogintimeNotEqualTo(Integer value) {
-            addCriterion("logintime <>", value, "logintime");
+            addCriterion("loginTime <>", value, "logintime");
             return (Criteria) this;
         }
 
         public Criteria andLogintimeGreaterThan(Integer value) {
-            addCriterion("logintime >", value, "logintime");
+            addCriterion("loginTime >", value, "logintime");
             return (Criteria) this;
         }
 
         public Criteria andLogintimeGreaterThanOrEqualTo(Integer value) {
-            addCriterion("logintime >=", value, "logintime");
+            addCriterion("loginTime >=", value, "logintime");
             return (Criteria) this;
         }
 
         public Criteria andLogintimeLessThan(Integer value) {
-            addCriterion("logintime <", value, "logintime");
+            addCriterion("loginTime <", value, "logintime");
             return (Criteria) this;
         }
 
         public Criteria andLogintimeLessThanOrEqualTo(Integer value) {
-            addCriterion("logintime <=", value, "logintime");
+            addCriterion("loginTime <=", value, "logintime");
             return (Criteria) this;
         }
 
         public Criteria andLogintimeIn(List<Integer> values) {
-            addCriterion("logintime in", values, "logintime");
+            addCriterion("loginTime in", values, "logintime");
             return (Criteria) this;
         }
 
         public Criteria andLogintimeNotIn(List<Integer> values) {
-            addCriterion("logintime not in", values, "logintime");
+            addCriterion("loginTime not in", values, "logintime");
             return (Criteria) this;
         }
 
         public Criteria andLogintimeBetween(Integer value1, Integer value2) {
-            addCriterion("logintime between", value1, value2, "logintime");
+            addCriterion("loginTime between", value1, value2, "logintime");
             return (Criteria) this;
         }
 
         public Criteria andLogintimeNotBetween(Integer value1, Integer value2) {
-            addCriterion("logintime not between", value1, value2, "logintime");
+            addCriterion("loginTime not between", value1, value2, "logintime");
             return (Criteria) this;
         }
     }

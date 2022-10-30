@@ -1,22 +1,20 @@
 package com.course.coursedesign2022.pojo;
 
-public class loginUser {
-    private Integer zhanghao;
+public class LoginUser {
+    private Integer id;
 
     private Integer mima;
-
-    private Integer id;
 
     private Integer information;
 
     private long logintime;
 
-    public Integer getZhanghao() {
-        return zhanghao;
+    public Integer getId() {
+        return id;
     }
 
-    public void setZhanghao(Integer zhanghao) {
-        this.zhanghao = zhanghao;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public Integer getMima() {
@@ -25,14 +23,6 @@ public class loginUser {
 
     public void setMima(Integer mima) {
         this.mima = mima;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public Integer getInformation() {

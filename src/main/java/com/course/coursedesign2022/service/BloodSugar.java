@@ -20,6 +20,8 @@ public class BloodSugar {
         if(BSguar.getBsrecord()>3){
             int grow = PointObject.getGrowScore();
             PointObject.setGrowScore(grow+1);
+            System.out.println(PointObject.getGrowScore()+PointObject.getExchangeScore());
+            PointObject.setScoreTotal(PointObject.getGrowScore()+PointObject.getExchangeScore());
             userMapper.updatePointObject(PointObject);
             System.out.println("成长积分+1");
         }

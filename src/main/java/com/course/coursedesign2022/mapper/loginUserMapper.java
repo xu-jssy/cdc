@@ -1,7 +1,7 @@
 package com.course.coursedesign2022.mapper;
 
-import com.course.coursedesign2022.pojo.loginUser;
-import com.course.coursedesign2022.pojo.loginUserExample;
+import com.course.coursedesign2022.pojo.LoginUser;
+import com.course.coursedesign2022.pojo.LoginUserExample;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
@@ -10,26 +10,26 @@ import java.util.List;
 
 @Mapper
 @Repository
-public interface loginUserMapper {
-    long countByExample(loginUserExample example);
+public interface LoginUserMapper {
+    long countByExample(LoginUserExample example);
 
-    int deleteByExample(loginUserExample example);
+    int deleteByExample(LoginUserExample example);
 
-    int deleteByPrimaryKey(Integer zhanghao);
+    int deleteByPrimaryKey(Integer id);
 
-    int insert(loginUser record);
+    int insert(LoginUser record);
 
-    int insertSelective(loginUser record);
+    int insertSelective(LoginUser record);
 
-    List<loginUser> selectByExample(loginUserExample example);
+    List<LoginUser> selectByExample(LoginUserExample example);
 
-    loginUser selectByPrimaryKey(Integer zhanghao);
+    LoginUser selectByPrimaryKey(Integer id);
 
-    int updateByExampleSelective(@Param("record") loginUser record, @Param("example") loginUserExample example);
+    int updateByExampleSelective(@Param("record") LoginUser record, @Param("example") LoginUserExample example);
 
-    int updateByExample(@Param("record") loginUser record, @Param("example") loginUserExample example);
+    int updateByExample(@Param("record") LoginUser record, @Param("example") LoginUserExample example);
 
-    int updateByPrimaryKeySelective(loginUser record);
+    int updateByPrimaryKeySelective(LoginUser record);
 
-    int updateByPrimaryKey(loginUser record);
+    int updateByPrimaryKey(LoginUser record);
 }

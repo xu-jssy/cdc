@@ -1,8 +1,9 @@
 package com.course.coursedesign2022.service;
-import com.course.coursedesign2022.mapper.loginUserMapper;
+
+import com.course.coursedesign2022.mapper.LoginUserMapper;
 import com.course.coursedesign2022.mapper.UserMapper;
+import com.course.coursedesign2022.pojo.LoginUser;
 import com.course.coursedesign2022.pojo.PointObject;
-import com.course.coursedesign2022.pojo.loginUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,15 +13,15 @@ import java.time.ZoneOffset;
 @Service
 public class Login {
     @Autowired
-    public loginUserMapper loginUserMapper;
+    public LoginUserMapper loginUserMapper;
 
     @Autowired
     public UserMapper userMapper;
 
-   public long login(int zhanghao) {
+   public long login(int id) {
 
-       loginUser loginuser = loginUserMapper.selectByPrimaryKey(zhanghao);
-       PointObject pointObject = userMapper.getPointObjectByID(loginuser.getId());
+       LoginUser loginuser = loginUserMapper.selectByPrimaryKey(id);
+       PointObject pointObject = userMapper.getPointObjectByID(id);
        System.out.println("登陆成功");
 
        //每日首次登陆判定
@@ -32,6 +33,7 @@ public class Login {
        if(lastlogintime<start || lastlogintime>end){
            int grow=pointObject.getGrowScore();
            pointObject.setGrowScore(grow+1);
+           pointObject.setScoreTotal(pointObject.getGrowScore()+pointObject.getExchangeScore());
            userMapper.updatePointObject(pointObject);
            System.out.println("成长积分+1");
        }
