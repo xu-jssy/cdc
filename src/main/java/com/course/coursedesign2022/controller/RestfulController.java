@@ -14,7 +14,8 @@ public class RestfulController {
 
     @GetMapping(value = "/user")
     public List<PointObject> getUser(){
-        return userMapper.getPointObject();
+        List<PointObject> pointObjects=userMapper.getPointObject();
+        return pointObjects;
     }
 
     @GetMapping(value = "/user/query/{id}")
@@ -23,7 +24,7 @@ public class RestfulController {
     }
 
     @PostMapping(value = "/user")
-    public PointObject addUser(@RequestParam("id") int id,
+    public List<PointObject> addUser(@RequestParam("id") int id,
                                @RequestParam("exchange") int exchange,
                                @RequestParam("grow") int grow,
                                @RequestParam("total") int total){
@@ -33,7 +34,8 @@ public class RestfulController {
         pointObject.setScoreTotal(total);
         pointObject.setId(id);
         userMapper.addPointObject(pointObject);
-        return userMapper.getPointObjectByID(id);
+        List<PointObject> pointObjects=userMapper.getPointObject();
+        return pointObjects;
 
     }
 
