@@ -18,5 +18,6 @@ public class FollowUpController {
     public PointObject followUp(@PathVariable("id") Integer id){
         followUp.FollowUp(id);
         return userMapper.getPointObjectByID(id);
+
     }
 }
