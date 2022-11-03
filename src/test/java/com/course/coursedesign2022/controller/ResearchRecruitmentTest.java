@@ -18,7 +18,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class B19031628Test {
+public class ResearchRecruitmentTest {
     //http请求的模拟
     @Inject
     private MockMvc mockMvc;
@@ -39,25 +39,6 @@ public class B19031628Test {
         System.out.println("---------");
     }
 
-    @Test
-    public void TestFollowup() throws Exception{
-        printUser(1);
-        RequestBuilder requestBuilder;
-        requestBuilder=get("/user/FollowUp/1");
-        mockMvc.perform(requestBuilder)
-                .andExpect(status().isOk());
-        printUser(1);
-    }
-
-    @Test
-    public void testExtendedActivity() throws Exception{
-        printUser(1);
-        RequestBuilder requestBuilder;
-        requestBuilder=get("/user/extendedActivity/1");
-        mockMvc.perform(requestBuilder)
-                .andExpect(status().isOk());
-        printUser(1);
-    }
 
     @Test
     public void testResearchRecruitment() throws Exception{
@@ -65,7 +46,7 @@ public class B19031628Test {
         RequestBuilder requestBuilder;
         requestBuilder=get("/user/research/1");
         mockMvc.perform(requestBuilder)
-               .andExpect(status().isOk());
+                .andExpect(status().isOk());
         printUser(1);
     }
 }
