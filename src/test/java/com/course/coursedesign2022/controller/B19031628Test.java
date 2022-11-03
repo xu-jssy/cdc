@@ -58,4 +58,14 @@ public class B19031628Test {
                 .andExpect(status().isOk());
         printUser(1);
     }
+
+    @Test
+    public void testResearchRecruitment() throws Exception{
+        printUser(1);
+        RequestBuilder requestBuilder;
+        requestBuilder=get("/user/research/1");
+        mockMvc.perform(requestBuilder)
+               .andExpect(status().isOk());
+        printUser(1);
+    }
 }
